@@ -2,8 +2,6 @@
 
 An AI-powered traffic scene perception platform that combines multiple YOLO object-detection models with an LLM orchestration layer to deliver real-time vehicle detection, traffic density analysis, violation detection, and natural-language traffic insights — all through a Django REST API backend and a Next.js dashboard frontend.
 
-> BTech Major Project — Computer Vision + LLM Orchestration for Intelligent Traffic Systems
-
 ---
 
 ## Overview
