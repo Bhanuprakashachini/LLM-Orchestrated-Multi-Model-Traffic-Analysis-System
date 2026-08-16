@@ -1,0 +1,46 @@
+{
+  "name": "llm-orchestrated-traffic-analysis-system",
+  "version": "1.0.0",
+  "description": "LLM Orchestrated Multi Model Traffic Analysis System - BTech Major Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others --raw \"npm run start:backend\" \"npm run start:frontend\"",
+    "dev": "npm run start",
+    "start:backend": "cd backend && python run_quiet.py 0.0.0.0:8000",
+    "start:frontend": "cd frontend && npx next dev -p 3001",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "setup": "npm run install:all && cd backend && python download_models.py",
+    "build": "cd frontend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && python manage.py collectstatic --noinput",
+    "clean": "cd frontend && rm -rf .next node_modules && cd ../backend && find . -name '__pycache__' -type d -exec rm -rf {} + 2>/dev/null || true",
+    "clean:windows": "cd frontend && rmdir /s /q .next 2>nul & rmdir /s /q node_modules 2>nul & cd ../backend & for /d /r . %%d in (__pycache__) do @if exist \"%%d\" rmdir /s /q \"%%d\" 2>nul",
+    "logs": "concurrently --kill-others --raw \"cd backend && python manage.py runserver 0.0.0.0:8000\" \"cd frontend && npx next dev -p 3001\"",
+    "test": "echo \"Running tests...\" && cd backend && python manage.py test --verbosity=0 && echo \"All tests passed\"",
+    "models": "cd backend && python download_models.py"
+  },
+  "keywords": [
+    "traffic-analysis",
+    "yolo",
+    "llm",
+    "django",
+    "nextjs",
+    "ai",
+    "computer-vision",
+    "btech-project"
+  ],
+  "author": "BTech Student",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}

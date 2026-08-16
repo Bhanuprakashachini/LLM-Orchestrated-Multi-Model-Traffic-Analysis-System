@@ -1,0 +1,23 @@
+{
+  "traffic_models": {
+    "yolov8": {
+      "model_path": "..\\models\\yolov8s_traffic.pt",
+      "enabled": true,
+      "description": "YOLOv8 optimized for traffic analysis"
+    },
+    "yolo11": {
+      "model_path": "..\\models\\yolo11s_traffic.pt",
+      "enabled": true,
+      "description": "YOLOv11 optimized for traffic analysis"
+    },
+    "yolo12": {
+      "model_path": "..\\models\\yolo12s_traffic.pt",
+      "enabled": true,
+      "description": "YOLOv12 optimized for traffic analysis"
+    }
+  },
+  "default_model": "yolo11",
+  "fallback_model": "yolov8",
+  "created": "2025-12-29T21:23:09.201510",
+  "optimized_for": "traffic_detection"
+}

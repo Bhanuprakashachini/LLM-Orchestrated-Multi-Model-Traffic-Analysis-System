@@ -1,0 +1,14 @@
+{
+  "total_violations": 0,
+  "speed_violations": 0,
+  "helmet_violations": 0,
+  "red_light_violations": 0,
+  "vehicle_counts": {
+    "cars": 0,
+    "bikes": 0,
+    "buses": 0,
+    "trucks": 0,
+    "total": 0
+  },
+  "last_updated": "2026-01-07T18:52:51.836577"
+}
